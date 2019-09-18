@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/space_24"
+            tools:context=".view.ContactFormActivity">
+
+            <TextView
+                style="@style/AppTheme.FormHeader"
+                android:text="@string/form_title" />
+
+            <TextView
+                style="@style/AppTheme.FormSubheader"
+                android:layout_marginTop="@dimen/space_12"
+                android:layout_marginBottom="@dimen/space_12"
+                android:text="@string/form_subtitle" />
+
+            <!-- TODO 06: TextView. We are going to define several labels with descriptive images on the left -->
+            <!-- We use them to identify the text fields in the form: name, phone, email, pets, notes -->
+            <!-- TODO 15: EditText (Input text fields). -->
+            <!-- We are going to define one EditText element for each text input field -->
+            <!-- TODO 16: Define the common style of all EditText elements -->
+            <!-- TODO 17: Define specific properties of each EditText element -->
+            <!-- hint: helper text used as placeholder -->
+            <!-- inputType: Defines the type of data being placed in a text field -->
+            <!-- TODO 19. Define observable fields in order to get values from the view -->
+            <!-- TODO 10. CheckedTextView. Extension of TextView -->
+            <!-- Mainly used in a lists. We'll use it here just for pedagogical purposes -->
+            <!-- TODO 11. CheckedTextView. Specific attributes like checkMark graphic must be defined -->
+            <!-- TODO 13. CheckTextView. We have to implement the state change of this widget -->
+            <!-- TODO 14. CheckTextView. We have to handle the click event from java code and change the state programmatically -->
+            <!-- onCheckStateToggled function must be defined -->
+            <!-- TODO 18. EditText. Disable when CheckedTextView is not checked -->
+        </LinearLayout>
+    </ScrollView>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.ualr.widgets.viewmodel.ContactViewModel" />
+    </data>
+</layout>

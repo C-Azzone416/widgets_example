@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Contacts</string>
+    <string name="form_title">create contact</string>
+    <string name="save_menu_option">save</string>
+    <string name="form_subtitle">Fill in all the fields. Remember that you have to provide real information.</string>
+    <string name="name_field_label">Name:</string>
+    <string name="name_field_hint">First name + last name</string>
+    <string name="phone_field_label">Phone:</string>
+    <string name="phone_field_hint">Personal / Professional</string>
+    <string name="email_field_label">Email:</string>
+    <string name="email_field_hint">Personal / Professional</string>
+    <string name="notes_field_label">Notes:</string>
+    <string name="notes_field_hint">Introduce everything you want to remember about the contact</string>
+    <string name="pet_field_label">Pet:</string>
+    <string name="pet_field_hint">Name or breed</string>
+</resources>

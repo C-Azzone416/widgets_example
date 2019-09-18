@@ -1,0 +1,54 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.FormHeader" parent="Widget.MaterialComponents.TextView">
+        <item name="android:fontFamily">@font/bitter</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textFontWeight">700</item>
+        <item name="android:textSize">@dimen/line_height</item>
+        <!-- TODO 01: TextView. Center-align the text -->
+        <!-- TODO 02: TextView. Capitalize text -->
+    </style>
+
+    <style name="AppTheme.FormSubheader" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body2</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!-- TODO 03: TextView. Add a greater letter spacing to the paragraph --><!-- Default value is 0 -->
+        <!-- TODO 04: TextView. Modify lineSpacing using a multiplier--> <!-- Multiplier factor applied to the current lineHeight -->
+        <!-- TODO 05: TextView. Set line height --><!-- Overrides the multiplier effect -->
+    </style>
+
+    <style name="AppTheme.TextFieldContent" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppTheme.TextFieldLabel" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textFontWeight">700</item>
+        <item name="android:layout_marginTop">@dimen/space_12</item>
+        <item name="android:layout_marginBottom">@dimen/space_8</item>
+        <!-- TODO 07: TextView. We can define the space between the drawable and the text in label -->
+        <!-- TODO 08: TextView. We can define the drawable color -->
+        <!-- TODO 09: TextView. We can vertically align to the center both the image and the text-->
+    </style>
+    <!-- TODO 11 CheckedTextView. Specific attributes like checkMark graphic must be defined -->
+    <!-- We define a new style AppTheme.TextFieldLabel.Checkable that extends from the style of the
+    regular textfield labels -->
+    <!-- TODO 12. CheckedTextView. We have to define a new drawable ic_checkmark in order to provide an specific
+    graphic for the checked and unchecked states -->
+    <!-- TODO 16: Define the common style of all EditText elements: AppTheme.TextField-->
+    <!-- backgroundTint: color of the bottom line -->
+    <!-- textColorHint: color of the hint -->
+    <!-- maxLine: maximum number of lines -->
+</resources>
