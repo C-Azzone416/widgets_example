@@ -51,4 +51,18 @@
         <item name="strokeColor">@color/colorAccent</item>
         <item name="cornerRadius">@dimen/corner_radius</item>
     </style>
+
+    <!-- TODO 24. MaterialCheckbox. We define the style: button, padding and button tint -->
+    <style name="AppTheme.Checkbox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:buttonTint">@color/checkbox_color</item>
+        <item name="android:button">@drawable/ic_cloud_checkbox</item>
+        <item name="android:paddingLeft">@dimen/space_12</item>
+    </style>
+
+    <!-- TODO 27. RadioButton. Style definition is very similar to Checkbox style -->
+    <style name="AppTheme.RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/checkbox_color</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 </resources>

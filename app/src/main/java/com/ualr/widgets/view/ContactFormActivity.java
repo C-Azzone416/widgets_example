@@ -9,9 +9,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.RadioGroup;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.button.MaterialButtonToggleGroup;
+import com.google.android.material.checkbox.MaterialCheckBox;
+import com.google.android.material.radiobutton.MaterialRadioButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.ualr.widgets.R;
@@ -45,6 +50,26 @@ public class ContactFormActivity extends AppCompatActivity {
                     MaterialButton checkedButton = findViewById(checkedId);
                     Log.d(TAG, String.format("The new checked element is: %s", checkedButton.getText().toString()));
                 }
+            }
+        });
+        // TODO 25. MaterialCheckbox. Detect state change
+        MaterialCheckBox confirmationCheckbox = findViewById(R.id.confirmation_cbx);
+        confirmationCheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    Log.d(TAG, "Conditions have been confirmed!");
+                }
+            }
+        });
+
+        // TODO 29. RadioGroup. Get the currently checked button
+        RadioGroup carRadioGroup = findViewById(R.id.cars_radio_group);
+        carRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                MaterialRadioButton checkedButton = (MaterialRadioButton) radioGroup.findViewById(i);
+                Log.d(TAG, String.format("Option %s has been selected.", checkedButton.getText().toString()));
             }
         });
     }
@@ -82,4 +107,7 @@ public class ContactFormActivity extends AppCompatActivity {
         }
         return result;
     }
+
+    // TODO 25. MaterialCheckbox. Detect state change
+
 }

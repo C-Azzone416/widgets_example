@@ -10,4 +10,7 @@
     <color name="textColorHintDisabled">#eee</color>
     <color name="backgroundColor">#e6e6e6</color>
     <color name="errorColor">#e74c3c</color>
+    <color name="checkboxColor">@color/textColorHintEnabled</color>
+    <color name="checkboxColorChecked">@color/colorPrimaryDark</color>
+    <color name="radioGroupTextColor">#686868</color>
 </resources>

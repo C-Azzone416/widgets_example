@@ -20,4 +20,9 @@
     <string name="family_option">Family</string>
     <string name="friend_option">Friend</string>
     <string name="work_option">Work</string>
+    <string name="checkbox_text">I promise my data are correct and conform to the truth.</string>
+    <string name="sedan_car">Sedan</string>
+    <string name="truck_car">Truck</string>
+    <string name="minivan_car">Minivan</string>
+    <string name="car_field">Car type</string>
 </resources>

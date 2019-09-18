@@ -92,6 +92,48 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/password_field_hint" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TODO 26. MaterialRadioButton. Also a two state button. We cannot uncheck it. Usually used in radiogroups -->
+            <!-- TODO 27. MaterialRadioButton. Style definition is very similar to Checkbox style -->
+            <!-- TODO 28. RadioGroup. Group of radio buttons. It provides several options to the user. Only one can be selected -->
+            <!-- TODO 29. RadioGroup. Get the currently checked button -->
+            <TextView
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/radioGroupTextColor"
+                android:drawableStart="@drawable/ic_directions_car_black_24dp"
+                android:drawableTint="@color/colorAccent"
+                android:drawablePadding="@dimen/space_8"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:text="@string/car_field"></TextView>
+
+            <RadioGroup
+                android:id="@+id/cars_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:text="@string/sedan_car"
+                style="@style/AppTheme.RadioButton" />
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:text="@string/minivan_car"
+                    style="@style/AppTheme.RadioButton" />
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:text="@string/truck_car"
+                    style="@style/AppTheme.RadioButton" />
+            </RadioGroup>
+            <!-- TODO 23. MaterialCheckbox. We define a checkbox which is basically a two-states button. Image + text-->
+            <!-- TODO 24. MaterialCheckbox. We define the style: button and button color -->
+            <!-- TODO 25. MaterialCheckbox. Detect state change -->
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/confirmation_cbx"
+                style="@style/AppTheme.Checkbox"
+                android:text="@string/checkbox_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.google.android.material.checkbox.MaterialCheckBox>
+
             <!-- TODO 12: We add a MaterialButton -->
             <!-- TODO 13: Let's check the several styled that Material theming has for buttons -->
             <!-- TODO 15: We add an icon to the button -->
