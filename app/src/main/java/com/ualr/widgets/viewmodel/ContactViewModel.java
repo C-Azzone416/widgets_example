@@ -12,17 +12,11 @@ public class ContactViewModel {
 
     private Contact model;
 
-    // TODO 19. Define observable fields in order to get values from the view
     public ObservableField<String> name = new ObservableField<>();
     public ObservableField<String> phone = new ObservableField<>();
     public ObservableField<String> email = new ObservableField<>();
     public ObservableField<String> pet = new ObservableField<>();
     public ObservableField<String> notes = new ObservableField<>();
-
-
-    // TODO 18. EditText. Disable when CheckedTextView is not checked.
-    //  We use an Observable boolean
-    public ObservableBoolean petEnabled = new ObservableBoolean();
 
     public ContactViewModel() {
         model = new Contact();

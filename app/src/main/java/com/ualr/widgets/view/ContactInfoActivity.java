@@ -21,7 +21,6 @@ public class ContactInfoActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Contact contactInfo = intent.getParcelableExtra(ContactFormActivity.PARCELABLE_NAME);
         if (contactInfo == null) return;
-        // TODO 20. UNCOMMENT THIS BLOCK
 //        TextView name = findViewById(R.id.nameTV);
 //        name.setText(contactInfo.getName());
 //        TextView phone = findViewById(R.id.phoneTV);

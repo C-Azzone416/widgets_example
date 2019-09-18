@@ -24,22 +24,89 @@
                 android:layout_marginBottom="@dimen/space_12"
                 android:text="@string/form_subtitle" />
 
-            <!-- TODO 06: TextView. We are going to define several labels with descriptive images on the left -->
-            <!-- We use them to identify the text fields in the form: name, phone, email, pets, notes -->
-            <!-- TODO 15: EditText (Input text fields). -->
-            <!-- We are going to define one EditText element for each text input field -->
-            <!-- TODO 16: Define the common style of all EditText elements -->
-            <!-- TODO 17: Define specific properties of each EditText element -->
-            <!-- hint: helper text used as placeholder -->
-            <!-- inputType: Defines the type of data being placed in a text field -->
-            <!-- TODO 19. Define observable fields in order to get values from the view -->
-            <!-- TODO 10. CheckedTextView. Extension of TextView -->
-            <!-- Mainly used in a lists. We'll use it here just for pedagogical purposes -->
-            <!-- TODO 11. CheckedTextView. Specific attributes like checkMark graphic must be defined -->
-            <!-- TODO 13. CheckTextView. We have to implement the state change of this widget -->
-            <!-- TODO 14. CheckTextView. We have to handle the click event from java code and change the state programmatically -->
-            <!-- onCheckStateToggled function must be defined -->
-            <!-- TODO 18. EditText. Disable when CheckedTextView is not checked -->
+            <!-- TODO 18: Include a togglegroup to select the type of contact we are creating -->
+            <!-- It's recommended to use materialButtonOutlinedStyle attribute for all child buttons -->
+            <!-- Any MaterialButtons added to this view group are automatically marked as checkable -->
+            <!-- By default multiple buttons within the same group can be checked -->
+            <!-- TODO 19: Enforce only one button checked at a time -->
+            <!-- TODO 20: We want to know which is the checked option at any time -->
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/contactTypeToggleGroup"
+                android:layout_gravity="center_horizontal"
+                app:singleSelection="true"
+                android:layout_marginTop="@dimen/space_12"
+                android:layout_marginBottom="@dimen/space_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.google.android.material.button.MaterialButton
+                    android:text="@string/family_option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+                <com.google.android.material.button.MaterialButton
+                    android:text="@string/friend_option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+                <com.google.android.material.button.MaterialButton
+                    android:text="@string/work_option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+            <!-- TODO 01: Include TextInputLayout elements -->
+            <!-- TODO 03: Change the hint text-->
+            <!-- TODO 04: Define the helper text -->
+            <!-- TODO 05: Define the starter icon -->
+            <!-- TODO 06: Add clear button at the end of the textfield: endIconMode-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/AppTheme.TextField"
+                app:startIconDrawable="@drawable/ic_perm_identity_black_24dp"
+                app:helperText="@string/name_field_helper"
+                app:endIconMode="clear_text">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name_field_hint" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TODO 07: Create new TextField for a password. Use again endIconMode but
+            with the corresponding inputType in order to hide password characters -->
+            <!-- TODO 08: Let's validate password in order to see how errors look like in TextInputLayout -->
+            <!-- TODO 09: We can use a character counter to give feedback to the user about the maximum
+            number of characters allowed and the current number of characters typed: counterEnabled and counterMaxLenght-->
+            <!-- TODO 10: We can customize the colors of the elements in the TextInputLayout -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordTextInput"
+                style="@style/AppTheme.TextField"
+                app:helperText="@string/password_field_helper"
+                app:counterEnabled="true"
+                app:counterMaxLength="8"
+                app:endIconMode="password_toggle">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordEditText"
+                    android:layout_width="match_parent"
+                    android:inputType="textPassword"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password_field_hint" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- TODO 12: We add a MaterialButton -->
+            <!-- TODO 13: Let's check the several styled that Material theming has for buttons -->
+            <!-- TODO 15: We add an icon to the button -->
+            <!-- TODO 16: We have to position the icon: gravity, padding -->
+            <!-- TODO 17: We can modify the style of the button -->
+            <com.google.android.material.button.MaterialButton
+                android:layout_gravity="end"
+                style="@style/AppTheme.Button"
+                app:icon="@drawable/ic_add_a_photo_black_24dp"
+                app:iconGravity="start"
+                app:iconPadding="@dimen/space_12"
+                android:padding="@dimen/space_8"
+                android:text="@string/add_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </LinearLayout>
     </ScrollView>
 

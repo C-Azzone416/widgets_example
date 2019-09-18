@@ -7,6 +7,7 @@
     <color name="backgroundTintEnabled">#ddd</color>
     <color name="backgroundTintDisabled">#fff</color>
     <color name="textColorHintEnabled">#bbb</color>
-    <color name="textColorHintDisabled">#ddd</color>
+    <color name="textColorHintDisabled">#eee</color>
     <color name="backgroundColor">#e6e6e6</color>
+    <color name="errorColor">#e74c3c</color>
 </resources>
