@@ -20,24 +20,17 @@ import com.google.android.material.radiobutton.MaterialRadioButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.ualr.widgets.R;
-import com.ualr.widgets.databinding.ActivityContactFormBinding;
-import com.ualr.widgets.viewmodel.ContactViewModel;
-
 
 public class ContactFormActivity extends AppCompatActivity {
-
 
     public static final String PARCELABLE_NAME = "ContactInfo";
     private static final String TAG = ContactFormActivity.class.getSimpleName();
     private static final int PASSWORD_CHARS = 8;
-    private ContactViewModel contactViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        contactViewModel = new ContactViewModel();
-        ActivityContactFormBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_contact_form);
-        binding.setViewModel(contactViewModel);
+        setContentView(R.layout.activity_contact_form);
         //TODO 20: We want to know which is the checked option at any time
         MaterialButtonToggleGroup toggleGroup = findViewById(R.id.contactTypeToggleGroup);
         toggleGroup.addOnButtonCheckedListener(new MaterialButtonToggleGroup.OnButtonCheckedListener() {
@@ -84,14 +77,14 @@ public class ContactFormActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.save_action) {
             // TODO 08: Let's validate password in order to see how errors look like in TextInputLayout
-            if (checkPassword())showContactInfo();
+            // if (checkPassword()) goToSettings();
+            goToSettings();
         }
         return super.onOptionsItemSelected(item);
     }
 
-    private void showContactInfo() {
-        Intent intent = new Intent(this, ContactInfoActivity.class);
-        //intent.putExtra(PARCELABLE_NAME, contactViewModel.getContactInfo());
+    private void goToSettings() {
+        Intent intent = new Intent(this, FakeSettingsActivity.class);
         startActivity(intent);
     }
 
