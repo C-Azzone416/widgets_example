@@ -23,6 +23,96 @@
                 android:layout_marginBottom="@dimen/space_12"
                 android:text="@string/form_subtitle" />
 
+            <!-- Share, Add to favourites, set as default -->
+
+            <!-- TODO 32. Chips. Create an example chip. They're just compact components that represent discrete information-->
+            <!-- TODO 33. Chips. They are usually used grouped. That's what we call a chipgroup. Reflows chips across multiple lines -->
+            <!-- TODO 34. Chips. Constraint chips to single horizontal. We have to use HorizontalScrollView if we want to povide access
+            to all the chips in the chipgroup-->
+            <!--HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <com.google.android.material.chip.ChipGroup
+                app:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <com.google.android.material.chip.Chip
+                android:text="hello chips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+                <com.google.android.material.chip.Chip
+                android:text="hello chips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+                <com.google.android.material.chip.Chip
+                android:text="hello chips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+                <com.google.android.material.chip.Chip
+                android:text="hello chips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView-->
+
+            <!-- TODO 35. Chips. Actions Chips -->
+            <!-- TODO 38. Chips. Set icon -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <com.google.android.material.chip.ChipGroup
+                app:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!-- TODO 40. Chips. Handle click events -->
+                <com.google.android.material.chip.Chip
+                    android:onClick="onChipClicked"
+                    app:chipIcon="@drawable/ic_share_black_24dp"
+                    android:text="@string/share_action_chip"
+                    style="@style/AppTheme.ActionChip" />
+                <com.google.android.material.chip.Chip
+                    app:chipIcon="@drawable/ic_send_black_24dp"
+                    android:text="@string/send_action_chip"
+                    style="@style/AppTheme.ActionChip" />
+                <com.google.android.material.chip.Chip
+                    app:chipIcon="@drawable/ic_phone_black_24dp"
+                    android:text="@string/call_action_chip"
+                    style="@style/AppTheme.ActionChip" />
+            </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginBottom="@dimen/space_8"
+                android:background="@color/textColorHintDisabled" />
+
+            <!-- TODO 41. Chips. Choice chips -->
+            <!-- TODO 43. Chips. Force single selection -->
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/choice_chip_group"
+                app:singleSelection="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.chip.Chip
+                    android:text="@string/minivan_car"
+                    style="@style/AppTheme.ChoiceChip" />
+                <com.google.android.material.chip.Chip
+                    android:text="@string/truck_car"
+                    style="@style/AppTheme.ChoiceChip" />
+                <com.google.android.material.chip.Chip
+                    android:text="@string/sedan_car"
+                    style="@style/AppTheme.ChoiceChip" />
+            </com.google.android.material.chip.ChipGroup>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginBottom="@dimen/space_8"
+                android:background="@color/textColorHintDisabled" />
+
             <!-- TODO 18: Include a togglegroup to select the type of contact we are creating -->
             <!-- It's recommended to use materialButtonOutlinedStyle attribute for all child buttons -->
             <!-- Any MaterialButtons added to this view group are automatically marked as checkable -->

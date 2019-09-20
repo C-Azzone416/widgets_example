@@ -16,6 +16,8 @@ import android.widget.RadioGroup;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.button.MaterialButtonToggleGroup;
 import com.google.android.material.checkbox.MaterialCheckBox;
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipGroup;
 import com.google.android.material.radiobutton.MaterialRadioButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -65,6 +67,16 @@ public class ContactFormActivity extends AppCompatActivity {
                 Log.d(TAG, String.format("Option %s has been selected.", checkedButton.getText().toString()));
             }
         });
+
+        // TODO 44. Chips. Get current checked chip
+        ChipGroup choiceChipGroup = findViewById(R.id.choice_chip_group);
+        choiceChipGroup.setOnCheckedChangeListener(new ChipGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(ChipGroup group, int checkedId) {
+                Log.d(TAG, ((Chip)group.findViewById(checkedId)).getText().toString());
+            }
+        });
+
     }
 
     @Override
@@ -101,6 +113,9 @@ public class ContactFormActivity extends AppCompatActivity {
         return result;
     }
 
-    // TODO 25. MaterialCheckbox. Detect state change
+    // TODO 40. Chips. Handle click events
+    public void onChipClicked(View view) {
+        Log.d(TAG, "Action chip clicked");
+    }
 
 }

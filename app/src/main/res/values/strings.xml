@@ -28,4 +28,7 @@
     <string name="settings_title">settings</string>
     <string name="sync_calendar">Sync calendar</string>
     <string name="events_reminders">Events and reminders</string>
+    <string name="share_action_chip">Share data</string>
+    <string name="send_action_chip">Send image</string>
+    <string name="call_action_chip">Make a call</string>
 </resources>
