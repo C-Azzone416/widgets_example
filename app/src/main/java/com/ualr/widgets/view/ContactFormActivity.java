@@ -2,14 +2,12 @@ package com.ualr.widgets.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 
@@ -20,58 +18,22 @@ import com.google.android.material.radiobutton.MaterialRadioButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.ualr.widgets.R;
-import com.ualr.widgets.databinding.ActivityContactFormBinding;
-import com.ualr.widgets.viewmodel.ContactViewModel;
-
 
 public class ContactFormActivity extends AppCompatActivity {
-
 
     public static final String PARCELABLE_NAME = "ContactInfo";
     private static final String TAG = ContactFormActivity.class.getSimpleName();
     private static final int PASSWORD_CHARS = 8;
-    private ContactViewModel contactViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        contactViewModel = new ContactViewModel();
-        ActivityContactFormBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_contact_form);
-        binding.setViewModel(contactViewModel);
-        //TODO 20: We want to know which is the checked option at any time
-        MaterialButtonToggleGroup toggleGroup = findViewById(R.id.contactTypeToggleGroup);
-        toggleGroup.addOnButtonCheckedListener(new MaterialButtonToggleGroup.OnButtonCheckedListener() {
-            @Override
-            public void onButtonChecked(MaterialButtonToggleGroup group, int checkedId, boolean isChecked) {
-                if (isChecked) {
-                    //TODO 21: Get the id of the current checked button
-                    Log.d(TAG, String.format("The new checked element index is: %d", checkedId));
-                    // TODO 22: Get information about the corresponding checked button
-                    MaterialButton checkedButton = findViewById(checkedId);
-                    Log.d(TAG, String.format("The new checked element is: %s", checkedButton.getText().toString()));
-                }
-            }
-        });
-        // TODO 25. MaterialCheckbox. Detect state change
-        MaterialCheckBox confirmationCheckbox = findViewById(R.id.confirmation_cbx);
-        confirmationCheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b) {
-                    Log.d(TAG, "Conditions have been confirmed!");
-                }
-            }
-        });
-
-        // TODO 29. RadioGroup. Get the currently checked button
-        RadioGroup carRadioGroup = findViewById(R.id.cars_radio_group);
-        carRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                MaterialRadioButton checkedButton = (MaterialRadioButton) radioGroup.findViewById(i);
-                Log.d(TAG, String.format("Option %s has been selected.", checkedButton.getText().toString()));
-            }
-        });
+        setContentView(R.layout.activity_contact_form);
+        //TODO 20: We want to know which is the current checked option within the MaterialButtonToggleGroup
+        //TODO 21: Get the id of the current checked button
+        //TODO 22: Get information about the corresponding checked button. For example, the text
+        //TODO 25. MaterialCheckbox. Detect state change
+        //TODO 29. RadioGroup. Get the currently checked button in RadioGroup
     }
 
     @Override
@@ -83,31 +45,18 @@ public class ContactFormActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.save_action) {
-            // TODO 08: Let's validate password in order to see how errors look like in TextInputLayout
-            if (checkPassword())showContactInfo();
+            //TODO 08: Let's validate password in order to see how errors look like in TextInputLayout
+            goToSettings();
         }
         return super.onOptionsItemSelected(item);
     }
 
-    private void showContactInfo() {
-        Intent intent = new Intent(this, ContactInfoActivity.class);
-        //intent.putExtra(PARCELABLE_NAME, contactViewModel.getContactInfo());
+    private void goToSettings() {
+        Intent intent = new Intent(this, FakeSettingsActivity.class);
         startActivity(intent);
     }
 
     // TODO 08: Let's validate password in order to see how errors look like in TextInputLayout
-    private boolean checkPassword() {
-        boolean result = true;
-        TextInputLayout passwordInput = findViewById(R.id.passwordTextInput);
-        TextInputEditText passwordEditText = findViewById(R.id.passwordEditText);
-        String password = passwordEditText.getText().toString();
-        if (password.length() != PASSWORD_CHARS) {
-            passwordInput.setError(getResources().getString(R.string.password_error_msg));
-            result = false;
-        }
-        return result;
-    }
-
     // TODO 25. MaterialCheckbox. Detect state change
 
 }

@@ -2,34 +2,29 @@ package com.ualr.widgets.view;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.util.Log;
+import android.view.DragEvent;
+import android.view.View;
+import android.widget.CompoundButton;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.ualr.widgets.R;
-import com.ualr.widgets.model.Contact;
 
 /**
  * Created by irconde on 2019-09-17.
  */
-public class ContactInfoActivity extends AppCompatActivity {
+public class FakeSettingsActivity extends AppCompatActivity {
+
+    public static final String TAG = FakeSettingsActivity.class.getSimpleName();
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact_info);
-        Intent intent = getIntent();
-        Contact contactInfo = intent.getParcelableExtra(ContactFormActivity.PARCELABLE_NAME);
-        if (contactInfo == null) return;
-//        TextView name = findViewById(R.id.nameTV);
-//        name.setText(contactInfo.getName());
-//        TextView phone = findViewById(R.id.phoneTV);
-//        phone.setText(contactInfo.getPhone());
-//        TextView email = findViewById(R.id.mailTV);
-//        email.setText(contactInfo.getEmail());
-//        TextView pet = findViewById(R.id.petTV);
-//        pet.setText(contactInfo.getPet());
-//        TextView notes = findViewById(R.id.notesTV);
-//        notes.setText(contactInfo.getNotes());
+        setContentView(R.layout.activity_fake_settings);
+        //TODO 31. SwitchMaterial. We can handle state changes as we did with checkboxes
     }
 }

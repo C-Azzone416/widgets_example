@@ -23,46 +23,28 @@
 
     <!-- TODO 02: Modify the parent style to see the difference between outlinedBox and FilledBox -->
     <!-- TODO 10: We can customize the colors of the elements in the TextInputLayout -->
-    <style name="AppTheme.TextField" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_marginBottom">@dimen/space_12</item>
-        <!-- TODO 11: Customize TextInputLayout colors: stroke, hint, startIcon, endIcon, background,
+    <!-- TODO 11: Customize TextInputLayout colors: stroke, hint, startIcon, endIcon, background,
         helper, error, counter -->
-        <item name="boxStrokeColor">@color/colorAccent</item>
-        <item name="hintTextColor">@color/colorAccent</item>
-        <item name="startIconTint">@color/colorAccent</item>
-        <item name="endIconTint">@color/colorAccent</item>
-        <item name="boxBackgroundColor">@color/textColorHintDisabled</item>
-        <item name="helperTextTextColor">@color/colorPrimaryDark</item>
-        <item name="errorTextColor">@color/errorColor</item>
-        <item name="errorIconTint">@color/errorColor</item>
-        <item name="counterOverflowTextColor">@color/errorColor</item>
-    </style>
+
 
     <!-- TODO 13: Let's check the several styled that Material theming has for buttons -->
     <!-- We'l finally used the Outlined button -->
     <!-- TODO 14: We'll change textColor and rippleColor -->
     <!-- TODO 17: We can modify the style of the button: icon, stroke and radius -->
-    <style name="AppTheme.Button" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:textColor">@color/colorAccent</item>
-        <item name="rippleColor">@color/textColorHintDisabled</item>
-        <item name="iconTint">@color/colorAccent</item>
-        <item name="strokeColor">@color/colorAccent</item>
-        <item name="cornerRadius">@dimen/corner_radius</item>
-    </style>
+
 
     <!-- TODO 24. MaterialCheckbox. We define the style: button, padding and button tint -->
-    <style name="AppTheme.Checkbox" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="android:buttonTint">@color/checkbox_color</item>
-        <item name="android:button">@drawable/ic_cloud_checkbox</item>
-        <item name="android:paddingLeft">@dimen/space_12</item>
-    </style>
 
     <!-- TODO 27. RadioButton. Style definition is very similar to Checkbox style -->
-    <style name="AppTheme.RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/checkbox_color</item>
+
+
+    <style name="AppTheme.Switch" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:textSize">16sp</item>
+        <item name="android:drawableTint">@color/textColorHintEnabled</item>
+        <item name="android:drawablePadding">@dimen/space_8</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/space_12</item>
     </style>
+    
 </resources>

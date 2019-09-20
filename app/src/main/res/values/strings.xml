@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Contacts</string>
     <string name="form_title">create contact</string>
-    <string name="save_menu_option">save</string>
+    <string name="settings_menu_option">settings</string>
     <string name="form_subtitle">Fill in all the fields. Remember that you have to provide real information.</string>
     <string name="name_field_hint">Name</string>
     <string name="name_field_helper">First name + last name</string>
@@ -25,4 +25,7 @@
     <string name="truck_car">Truck</string>
     <string name="minivan_car">Minivan</string>
     <string name="car_field">Car type</string>
+    <string name="settings_title">settings</string>
+    <string name="sync_calendar">Sync calendar</string>
+    <string name="events_reminders">Events and reminders</string>
 </resources>
