@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TODO 32: ImageView. Include images in the layour using ImageView -->
+
+    <!--ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/android" /-->
+
+    <!-- TODO 33: ImageView. Sometimes we have to use the image within and ImageView with a prefixed size -->
+    <!-- As we can see it doesn't perfectly fit its container -->
+    <ImageView style="@style/AppTheme.ImageView.Fixed"
+        android:background="@color/colorAccent"
+        android:src="@drawable/android" />
+
+    <!-- TODO 34: ImageView. Center the image in the view with no scaling -->
+    <ImageView style="@style/AppTheme.ImageView.Fixed"
+        android:scaleType="center"
+        android:background="@color/colorAccent"
+        android:src="@drawable/android" />
+
+    <!-- TODO 35: ImageView. The image is centered and scaled keeping the aspect ratio -->
+    <!-- Both dimensions of the image will be equal to or larger than the corresponding dimensions of the view -->
+    <ImageView style="@style/AppTheme.ImageView.Fixed"
+        android:scaleType="centerCrop"
+        android:background="@color/colorAccent"
+        android:src="@drawable/android" />
+
+    <!-- TODO 36: ImageView. We can also center the image and scale it to avoid overflowing its container -->
+    <ImageView style="@style/AppTheme.ImageView.Fixed"
+        android:scaleType="fitCenter"
+        android:background="@color/colorAccent"
+        android:src="@drawable/android" />
+
+    <!-- TODO 37: ImageView. We can also force the image to have the same dimensions its container has -->
+    <ImageView style="@style/AppTheme.ImageView.Fixed"
+        android:scaleType="fitXY"
+        android:background="@color/colorAccent"
+        android:src="@drawable/android" />
+
+</LinearLayout>

@@ -74,5 +74,13 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/space_12</item>
     </style>
+
+    <style name="AppTheme.ImageView.Fixed" parent="AppTheme">
+        <item name="android:layout_width">@dimen/image_size</item>
+        <item name="android:layout_height">@dimen/image_size</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">@dimen/space_12</item>
+        <item name="android:titleMarginBottom">@dimen/space_12</item>
+    </style>
     
 </resources>

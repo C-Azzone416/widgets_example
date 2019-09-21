@@ -28,4 +28,5 @@
     <string name="settings_title">settings</string>
     <string name="sync_calendar">Sync calendar</string>
     <string name="events_reminders">Events and reminders</string>
+    <string name="images_menu_option">images</string>
 </resources>
