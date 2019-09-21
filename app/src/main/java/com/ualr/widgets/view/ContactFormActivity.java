@@ -3,6 +3,7 @@ package com.ualr.widgets.view;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -44,15 +45,20 @@ public class ContactFormActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.save_action) {
-            //TODO 08: Let's validate password in order to see how errors look like in TextInputLayout
-            goToSettings();
+        switch (item.getItemId()) {
+            case R.id.settings_action:
+                // TODO 08: Let's validate password in order to see how errors look like in TextInputLayout
+                goToActivity(FakeSettingsActivity.class);
+                break;
+            case R.id.images_action:
+                goToActivity(ImagesActivity.class);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
 
-    private void goToSettings() {
-        Intent intent = new Intent(this, FakeSettingsActivity.class);
+    private void goToActivity(Class activity) {
+        Intent intent = new Intent(this, activity);
         startActivity(intent);
     }
 

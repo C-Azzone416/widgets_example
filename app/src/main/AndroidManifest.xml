@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.FakeSettingsActivity"/>
+        <activity android:name=".view.ImagesActivity"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

@@ -6,4 +6,5 @@
     <dimen name="space_12">12dp</dimen>
     <dimen name="line_height">18sp</dimen>
     <dimen name="corner_radius">0dp</dimen>
+    <dimen name="image_size">128dp</dimen>
 </resources>
