@@ -138,9 +138,5 @@
             </com.google.android.material.chip.ChipGroup>
             </HorizontalScrollView>
 
-            <!-- TODO 24. Chips. Filter chips. -->
-
-
-
         </LinearLayout>
     </ScrollView>
