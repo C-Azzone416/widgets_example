@@ -24,62 +24,12 @@
                 style="@style/AppTheme.FormHeader"
                 android:text="@string/basic_chips_title" />
 
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            <com.google.android.material.chip.ChipGroup
-                app:singleLine="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            <com.google.android.material.chip.Chip
-                android:text="hello chips"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-                <com.google.android.material.chip.Chip
-                android:text="hello chips"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-                <com.google.android.material.chip.Chip
-                android:text="hello chips"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-                <com.google.android.material.chip.Chip
-                android:text="hello chips"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            </com.google.android.material.chip.ChipGroup>
-            </HorizontalScrollView>
-
             <!-- TODO 04. Chips. Actions Chips -->
             <!-- TODO 07. Chips. Set icon -->
 
             <TextView
                 style="@style/AppTheme.FormHeader"
                 android:text="@string/action_chips_title" />
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            <com.google.android.material.chip.ChipGroup
-                app:singleLine="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <!-- TODO 09. Chips. Handle click events -->
-                <com.google.android.material.chip.Chip
-                    android:onClick="onChipClicked"
-                    app:chipIcon="@drawable/ic_share_black_24dp"
-                    android:text="@string/share_action_chip"
-                    style="@style/AppTheme.ActionChip" />
-                <com.google.android.material.chip.Chip
-                    app:chipIcon="@drawable/ic_send_black_24dp"
-                    android:text="@string/send_action_chip"
-                    style="@style/AppTheme.ActionChip" />
-                <com.google.android.material.chip.Chip
-                    app:chipIcon="@drawable/ic_phone_black_24dp"
-                    android:text="@string/call_action_chip"
-                    style="@style/AppTheme.ActionChip" />
-            </com.google.android.material.chip.ChipGroup>
-            </HorizontalScrollView>
 
             <View style="@style/AppTheme.HorizontalDivider"/>
 
@@ -89,22 +39,6 @@
             <TextView
                 style="@style/AppTheme.FormHeader"
                 android:text="@string/choice_chips_title" />
-
-            <com.google.android.material.chip.ChipGroup
-                android:id="@+id/choice_chip_group"
-                app:singleSelection="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <com.google.android.material.chip.Chip
-                    android:text="@string/minivan_car"
-                    style="@style/AppTheme.ChoiceChip" />
-                <com.google.android.material.chip.Chip
-                    android:text="@string/truck_car"
-                    style="@style/AppTheme.ChoiceChip" />
-                <com.google.android.material.chip.Chip
-                    android:text="@string/sedan_car"
-                    style="@style/AppTheme.ChoiceChip" />
-            </com.google.android.material.chip.ChipGroup>
 
             <View style="@style/AppTheme.HorizontalDivider"/>
 
@@ -125,18 +59,7 @@
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- TODO 14. Chips. Input chips. They allow to covert text input into chips -->
-            <HorizontalScrollView
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent">
-            <com.google.android.material.chip.ChipGroup
-                android:id="@+id/hobbies_chip_group"
-                android:layout_width="match_parent"
-                app:singleLine="true"
-                android:layout_marginTop="@dimen/space_8"
-                android:layout_height="wrap_content">
-            </com.google.android.material.chip.ChipGroup>
-            </HorizontalScrollView>
+            <!-- TODO 14. Chips. Entry chips. They allow to covert text input into chips -->
 
         </LinearLayout>
     </ScrollView>

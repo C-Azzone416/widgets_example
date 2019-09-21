@@ -6,7 +6,6 @@
         <item name="colorAccent">@color/colorAccent</item>
         <!-- TODO 20: The attribute is then referenced from App theme definition. -->
         <!-- We create a link between the resource attribute and the style -->
-        <item name="EntryChipStyle">@style/AppTheme.EntryChip</item>
     </style>
 
     <style name="AppTheme.FormHeader" parent="Widget.MaterialComponents.TextView">
@@ -28,45 +27,19 @@
         <item name="android:background">@color/textColorHintDisabled</item>
     </style>
 
-    <!-- TODO 04. Chips. Actions Chips -->
-    <style name="AppTheme.ActionChip" parent="Widget.MaterialComponents.Chip.Action">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <!-- TODO 05. Chips. Make icon visible -->
-        <item name="chipIconVisible">true</item>
-        <!-- TODO 06. Chips. Customize colors and shape-->
-        <item name="chipBackgroundColor">@android:color/white</item>
-        <item name="chipStrokeColor">@color/colorAccent</item>
-        <item name="chipStrokeWidth">1dp</item>
-        <item name="android:textColor">@color/colorAccent</item>
-        <item name="rippleColor">@color/colorAccent</item>
-        <item name="chipCornerRadius">@dimen/chip_corner_radius</item>
-        <!-- TODO 08. Chips. Customize icon -->
-        <item name="chipIconTint">@color/colorAccent</item>
-        <item name="chipStartPadding">@dimen/space_12</item>
-        <item name="chipIconSize">@dimen/chip_icon_size</item>
-    </style>
-    <!-- TODO 11. Chips. Choice chips. Define style -->
-    <style name="AppTheme.ChoiceChip" parent="Widget.MaterialComponents.Chip.Choice">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
     <style name="AppTheme.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="boxStrokeColor">@color/colorAccent</item>
         <item name="boxBackgroundColor">@android:color/white</item>
     </style>
 
+    <!-- TODO 04. Chips. Actions Chips -->
+    <!-- TODO 05. Chips. Make icon visible -->
+    <!-- TODO 06. Chips. Customize colors and shape-->
+    <!-- TODO 08. Chips. Customize icon -->
+    <!-- TODO 11. Chips. Choice chips. Define style -->
+
     <!-- TODO 21. Chips. Entry chips. We define the style for the Entry chip
     attributes file that points at the desired style. -->
     <!-- TODO 23. Chips. Entry chips. We don't wants chips to be checkable in this case -->
-    <style name="AppTheme.EntryChip" parent="Widget.MaterialComponents.Chip.Entry">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="chipBackgroundColor">@android:color/white</item>
-        <item name="chipStrokeColor">@color/colorAccent</item>
-        <item name="chipStrokeWidth">1dp</item>
-        <item name="android:textColor">@color/colorAccent</item>
-        <item name="rippleColor">@color/colorAccent</item>
-        <item name="android:checkable">false</item>
-    </style>
+
 </resources>
